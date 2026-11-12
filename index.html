@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeArya - Digital Agency & Tech Internships</title>
+
+  <!-- Performance Optimizations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+  <!-- Google Consent Mode -->
+  <script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Set default consent for specific regions according to your requirements
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'regions': ['IN'] // India region code
+    });
+
+    // Set default consent for all other regions according to your requirements
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="THfhAsPtFhg5rJqyPCCNeIVWMVkQnyVB1sRoqFtcbAk" />
+  <meta name="google-site-verification" content="google805ba49b66d18cc6" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NDE1CEBTH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6NDE1CEBTH');
+  </script>
+
+  <!-- SEO Enhancement Script - disabled in development -->
+  <script>
+    if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      var s = document.createElement('script');
+      s.src = 'https://seo-fixer.writesonic.com/site-audit/fixer-script/index.js';
+      s.id = 'wsAiSeoMb';
+      s.onload = function () {
+        if (window.wsSEOfixer) {
+          window.wsSEOfixer.configure({
+            hostURL: 'https://seo-fixer.writesonic.com',
+            siteID: '6842eafe8d1bb350c4eae431'
+          });
+        }
+      };
+      document.head.appendChild(s);
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

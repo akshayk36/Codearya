@@ -1,0 +1,308 @@
+
+/* Enhanced Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) translateZ(0);
+  }
+  25% {
+    transform: translateY(-15px) translateX(5px) translateZ(0);
+  }
+  50% {
+    transform: translateY(-25px) translateX(-3px) translateZ(0);
+  }
+  75% {
+    transform: translateY(-10px) translateX(-8px) translateZ(0);
+  }
+}
+
+@keyframes random-drift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) translateZ(0);
+  }
+  25% {
+    transform: translate(10px, -15px) rotate(90deg) translateZ(0);
+  }
+  50% {
+    transform: translate(-5px, -25px) rotate(180deg) translateZ(0);
+  }
+  75% {
+    transform: translate(-15px, -10px) rotate(270deg) translateZ(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 0 10px currentColor;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateZ(0);
+    box-shadow: 0 0 25px currentColor;
+  }
+}
+
+@keyframes wave-flow {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+  50% {
+    stroke-dashoffset: -50;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -100;
+    opacity: 0.8;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0) translateZ(0);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0);
+  }
+}
+
+@keyframes blur-shimmer {
+  0%, 100% {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.2s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1.2s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1.2s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-random-drift {
+  animation: random-drift 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-wave-flow {
+  animation: wave-flow 4s ease-in-out infinite;
+}
+
+.animate-wave-flow-delayed {
+  animation: wave-flow 4s ease-in-out infinite 2s;
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-blur-shimmer {
+  animation: blur-shimmer 3s ease-in-out infinite;
+}
+
+/* Animation delay utilities */
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2000ms;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3000ms;
+}
+
+/* Mobile/Tablet specific blur effects */
+@media (max-width: 768px) {
+  .mobile-blur {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tablet-blur {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+/* Extra small screen utilities for 300px+ */
+@media (min-width: 300px) {
+  .xs\:w-2 {
+    width: 0.5rem;
+  }
+  .xs\:h-2 {
+    height: 0.5rem;
+  }
+  .xs\:w-3 {
+    width: 0.75rem;
+  }
+  .xs\:h-3 {
+    height: 0.75rem;
+  }
+  .xs\:w-4 {
+    width: 1rem;
+  }
+  .xs\:h-4 {
+    height: 1rem;
+  }
+  .xs\:w-12 {
+    width: 3rem;
+  }
+  .xs\:h-12 {
+    height: 3rem;
+  }
+  .xs\:w-14 {
+    width: 3.5rem;
+  }
+  .xs\:h-14 {
+    height: 3.5rem;
+  }
+  .xs\:text-xs {
+    font-size: 0.75rem;
+  }
+  .xs\:text-sm {
+    font-size: 0.875rem;
+  }
+  .xs\:text-xl {
+    font-size: 1.25rem;
+  }
+  .xs\:mb-3 {
+    margin-bottom: 0.75rem;
+  }
+  .xs\:mb-4 {
+    margin-bottom: 1rem;
+  }
+  .xs\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  .xs\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .xs\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.5rem;
+  }
+  .xs\:border-2 {
+    border-width: 2px;
+  }
+  .xs\:h-5 {
+    height: 1.25rem;
+  }
+}
+
+/* Enhanced mobile blur for very small screens */
+@media (max-width: 480px) {
+  .mobile-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+}
+
+/* Enhanced tablet blur */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .tablet-blur {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+  
+  .animate-scroll {
+    animation: scroll 35s linear infinite;
+  }
+}
